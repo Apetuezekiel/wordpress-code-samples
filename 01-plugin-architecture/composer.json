@@ -1,0 +1,42 @@
+{
+    "name": "ezekielapetu/plugin-boilerplate",
+    "description": "Production-quality WordPress plugin boilerplate with OOP architecture and PSR-4 autoloading.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ezekiel Apetu",
+            "email": "apetudevbeast@gmail.com",
+            "homepage": "https://github.com/Apetuezekiel"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "wp-coding-standards/wpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EzekielApetu\\PluginBoilerplate\\": "includes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EzekielApetu\\PluginBoilerplate\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": "phpcs --standard=WordPress .",
+        "lint-fix": "phpcbf --standard=WordPress .",
+        "test": "phpunit"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
