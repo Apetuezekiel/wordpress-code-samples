@@ -1,0 +1,28 @@
+{
+    "name": "ezekiel-testimonial-block",
+    "version": "1.0.0",
+    "description": "Custom Gutenberg testimonial block built with @wordpress/scripts.",
+    "author": "Ezekiel Apetu <apetudevbeast@gmail.com>",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/Apetuezekiel/wordpress-code-samples",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "wp-scripts build",
+        "start": "wp-scripts start",
+        "lint:js": "wp-scripts lint-js",
+        "lint:css": "wp-scripts lint-style",
+        "format": "wp-scripts format",
+        "packages-update": "wp-scripts packages-update",
+        "plugin-zip": "wp-scripts plugin-zip"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.0.0"
+    },
+    "dependencies": {
+        "@wordpress/block-editor": "*",
+        "@wordpress/blocks": "*",
+        "@wordpress/components": "*",
+        "@wordpress/element": "*",
+        "@wordpress/i18n": "*"
+    }
+}

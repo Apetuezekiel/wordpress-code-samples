@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ezekiel/testimonial",
+    "version": "1.0.0",
+    "title": "Testimonial",
+    "category": "text",
+    "icon": "format-quote",
+    "description": "Display a styled testimonial with quote text, author name, and a customisable background colour.",
+    "keywords": ["testimonial", "quote", "review"],
+    "textdomain": "ezekiel-blocks",
+    "attributes": {
+        "quote": {
+            "type": "string",
+            "source": "html",
+            "selector": "blockquote p",
+            "default": ""
+        },
+        "author": {
+            "type": "string",
+            "source": "html",
+            "selector": "cite",
+            "default": ""
+        },
+        "role": {
+            "type": "string",
+            "source": "html",
+            "selector": ".testimonial__role",
+            "default": ""
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f9f9f9"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#333333"
+        },
+        "avatarUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "rating": {
+            "type": "number",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 5
+        },
+        "align": {
+            "type": "string",
+            "default": "none"
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "anchor": true,
+        "spacing": {
+            "padding": true,
+            "margin": true
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true
+        },
+        "color": {
+            "gradients": true,
+            "link": false
+        }
+    },
+    "example": {
+        "attributes": {
+            "quote": "This plugin architecture is incredibly clean and well-organised. Exactly what production code should look like.",
+            "author": "Jane Smith",
+            "role": "Lead Developer, Acme Corp",
+            "backgroundColor": "#eef4ff",
+            "rating": 5
+        }
+    },
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css",
+    "viewScript": "file:./build/view.js"
+}
